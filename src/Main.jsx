@@ -9,18 +9,25 @@ export default function Main() {
         return <li key={ingredient}>{ingredient}</li>
     })
 
-    function handleSubmit(event) {
+    function addIngredient(event) {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")  // name from form > input //
-        ingredients.push(newIngredient);
-        setIngredients(prevIngredients => [...prevIngredients], newIngredient)
-        console.log("value : " + ingredients);
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+        //alert(`You added '${newIngredient}' in the list`);
+        event.currentTarget.reset()
+    }
+
+    function addIngredientNotWorking(formData) {
+        console.log("formData : ", formData)
+        const newIngredient = formData.get("ingredient")
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+        console.log("newingredient: " ,newIngredient);
     }
 
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form onSubmit={addIngredient} className="add-ingredient-form">
                 <input 
                     type="text"
                     placeholder="e.g. oregano"
