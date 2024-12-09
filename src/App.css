@@ -72,3 +72,45 @@ body {
   margin-right: 5px;
   /* border: 1px solid red; */
 }
+
+
+section > h2 {
+  margin-left: 20px;
+}
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  
+}
+
+.ingredients-list > li {
+  margin: 6px 0;
+}
+
+.get-recipe-container {
+  display: flex;
+  background-color: #e8d7d5;
+  max-width: 550px;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-radius: 6px;
+  /* border: 1px solid red; */
+  margin-bottom: 50px;
+}
+.get-recipe-container > div > h3 {
+  font-style: oblique;
+}
+
+.get-recipe-container > button {
+  font-family: Inter, sans-serif;
+  border-radius: 6px;
+  border: none;
+  background-color: #ed6a1f;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 4px 8px 4px 8px;
+}
