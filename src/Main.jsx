@@ -2,7 +2,6 @@ import { useState } from "react"
 
 export default function Main() {
 
-    const ingredients_1 = ["Chicken", "Oregano", "Tomatoes", "Olive Oil", "Spinach"]
     const [ingredients, setIngredients] = useState(["Chicken", "Oregano", "Tomatoes"])
     const [recipeShown, setRecipeShown] = useState(false)
 
@@ -21,13 +20,6 @@ export default function Main() {
 
     function toggleRecipeShown() {
         setRecipeShown(prevShown => !prevShown)
-    }
-
-    function addIngredientNotWorking(formData) {
-        console.log("formData : ", formData)
-        const newIngredient = formData.get("ingredient")
-        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
-        console.log("newingredient: ", newIngredient);
     }
 
     return (
